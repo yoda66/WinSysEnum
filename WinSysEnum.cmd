@@ -4,7 +4,7 @@ FOR /F "tokens=2 delims='='" %%A in ('wmic os get csname /value') do SET csname=
 
 call:datetime
 set out=%csname%-%DT%.txt
-set version=V20131205-1228
+set version=V20140205-0930
 echo [*] Windows System Analysis Script %version%
 echo [*] Output file is [%CD%\%out%]
 echo [*] CTRL-C to abort...
@@ -47,9 +47,7 @@ call:runcmd %out% "nslookup www.opendns.com 8.8.8.8"
 
 call:runcmd %out% "arp -a"
 call:runcmd %out% "tracert /w 1000 8.8.8.8"
-call:runcmd %out% "tracert /w 1000 192.168.2.1"
 call:runcmd %out% "ping microsoft.com"
-call:runcmd %out% "ping 192.168.2.1"
 call:runcmd %out% "ping 8.8.8.8"
 call:runcmd %out% "sc query"
 call:runcmd %out% "schtasks"
