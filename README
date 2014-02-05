@@ -1,0 +1,9 @@
+
+WinSysEnum
+==========
+A simple Windows command file that somewhat emulates winenum.rb under Metasploit
+and gathers lots of data about a Windows system.   It is designed to be run locally
+as Administrator and writes data with a timestamped filename.
+
+-Joff Thyer
+
