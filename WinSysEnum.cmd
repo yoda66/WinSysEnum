@@ -62,6 +62,11 @@ call:runcmd %out% wmic useraccount list
 call:runcmd %out% wmic useraccount list brief
 call:runcmd %out% wmic useraccount list full
 call:runcmd %out% wmic sysaccount list
+call:datetime
+echo [*] %DT%: Enumerating broken services with space in path
+echo [*] %DT%: Enumerating broken services with space in path >>%out% 2>&1
+wmic service get name,displayname,pathname,startmode | findstr /i "auto" | findstr /i /v "c:\windows\\" | findstr /i /v """ >>%out% 2>&1
+
 
 call:datetime
 echo [*] ==========================================
