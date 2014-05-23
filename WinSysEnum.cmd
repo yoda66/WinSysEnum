@@ -19,7 +19,7 @@ call:runcmd %out% ipconfig /all
 call:runcmd %out% ipconfig /displaydns
 call:runcmd %out% net user
 call:runcmd %out% net accounts
-call:runcmd %out% net view /domain
+call:runcmd %out% net view /domain:%userdomain%
 call:runcmd %out% net use
 call:runcmd %out% net session
 call:runcmd %out% net localgroup administrators
