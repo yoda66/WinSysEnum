@@ -37,6 +37,7 @@ call:runcmd %out% netsh firewall show config
 call:runcmd %out% netsh firewall show logging
 call:runcmd %out% netsh firewall show opmode
 call:runcmd %out% netsh firewall show portopening
+call:runcmd %out% systeminfo
 
 call:runcmd %out% reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 call:runcmd %out% reg query HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
@@ -47,6 +48,7 @@ call:runcmd %out% reg query HKLM\SYSTEM\CurrentControlSet\Enum\USBSTOR
 call:runcmd %out% reg query HKLM\SYSTEM\CurrentControlSet\Enum\USB
 call:runcmd %out% reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2
 call:runcmd %out% reg query HKLM\Software\RealVNC\WinVNC4
+
 
 call:datetime
 echo [*] ==========================================
